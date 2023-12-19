@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EvrydayBook"
         mc:Ignorable="d"
-        Title="Settings_Window" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Icon="/Resourse/Pictures/Logotip.jpg" MinWidth="800" MinHeight="500" Height="500" Width="800" Title="Мой профиль">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Image Width="200" Height="200" Margin="30,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Resourse/Pictures/Logotip.jpg"></Image>
+                <Label Content="ghbdtn" Margin="30,0,0,0" Width="200" Background="red" Style="{StaticResource H2}" />
+            </StackPanel>
+            <StackPanel>
+                <DockPanel>
+                    <Label Content="Логин" Style="{StaticResource H2}" Margin="10" HorizontalAlignment="Right"/>
+                    <TextBox Style="{StaticResource Reg_Auth_TextBox}" Width="150" Margin="10" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="Пароль" Style="{StaticResource H2}" Margin="10" HorizontalAlignment="Right"/>
+                    <TextBox Style="{StaticResource Reg_Auth_TextBox}" Width="150" Margin="10" />
+                </DockPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+        <Button Style="{StaticResource Main_Button}" HorizontalAlignment="Center" Margin="10" Content="Назад" />
+    </StackPanel>
 </Window>

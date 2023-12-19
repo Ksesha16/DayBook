@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EvrydayBook"
         mc:Ignorable="d"
-        Title="Calendar_Window" Height="450" Width="800">
+        Icon="/Resourse/Pictures/Logotip.jpg" MinWidth="800" MinHeight="500" Height="500" Width="800" Title="Авторизация и Регистрация">
     <Grid>
         
     </Grid>

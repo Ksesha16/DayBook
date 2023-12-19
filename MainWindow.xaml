@@ -1,12 +1,111 @@
-﻿<Window x:Class="EvrydayBook.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EvrydayBook"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+﻿    <Window x:Class="EvrydayBook.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+            xmlns:local="clr-namespace:EvrydayBook"
+            mc:Ignorable="d"
+            Icon="/Resourse/Pictures/Logotip.jpg" MinWidth="800" MinHeight="500" Height="500" Width="800" Title="EverydayBook">
+        <StackPanel>
+            <ToolBar Height="60" VerticalAlignment="Top" Background="#ABD2FA">
+                <Button Click="TaskButton_Click">
+                    <Image Source="/Resourse/Pictures/Task_logo.jpg" />
+                </Button>
+                <Separator/>
+                <Button Click="CalendarButton_Click">
+                    <Image Source="/Resourse/Pictures/Calendar_logo.jpg" />
+                </Button>
+                <Separator/>
+                <Button Click="ProfileButton_Click">
+                    <Image Source="/Resourse/Pictures/Profile_logo.jpg" />
+                </Button>
+
+            </ToolBar>
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <StackPanel Grid.ColumnSpan="7" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button FontSize="20" Content="⮜" Click="PreviousMonth_Click"></Button>
+                <Label x:Name="MonthLabel" Grid.Row="0" Grid.ColumnSpan="7" Style="{StaticResource DayLabelHeader}" />
+                <Button  FontSize="20" Content="⮞" Click="NextMonth_Click"></Button>
+
+            </StackPanel>
+            <Label  Grid.Row="1" Grid.Column="0" Content="Понедельник" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="1" Content="Вторник" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="2" Content="Среда" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="3" Content="Четврег" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="4" Content="Пятница" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="5" Content="Суббота" Style="{StaticResource DayLabelHeader}" />
+                <Label  Grid.Row="1" Grid.Column="6" Content="Воскресенье" Style="{StaticResource DayLabelHeader}" />
+
+<!--1 строка-->
+            <Label x:Name="A_2_0" Grid.Row="2" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_1" Grid.Row="2" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_2" Grid.Row="2" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_3" Grid.Row="2" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_4" Grid.Row="2" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_5" Grid.Row="2" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_2_6" Grid.Row="2" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+<!--2 строка-->
+            <Label x:Name="A_3_0" Grid.Row="3" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_1" Grid.Row="3" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_2" Grid.Row="3" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_3" Grid.Row="3" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_4" Grid.Row="3" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_5" Grid.Row="3" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_3_6" Grid.Row="3" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+<!--3 строка-->
+            <Label x:Name="A_4_0" Grid.Row="4" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_1" Grid.Row="4" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_2" Grid.Row="4" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_3" Grid.Row="4" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_4" Grid.Row="4" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_5" Grid.Row="4" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_4_6" Grid.Row="4" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+<!--4 строк4-->
+            <Label x:Name="A_5_0" Grid.Row="5" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_1" Grid.Row="5" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_2" Grid.Row="5" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_3" Grid.Row="5" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_4" Grid.Row="5" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_5" Grid.Row="5" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_5_6" Grid.Row="5" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+<!--5 строка-->
+            <Label x:Name="A_6_0" Grid.Row="6" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_1" Grid.Row="6" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_2" Grid.Row="6" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_3" Grid.Row="6" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_4" Grid.Row="6" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_5" Grid.Row="6" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_6_6" Grid.Row="6" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+<!--6 строка-->
+            <Label x:Name="A_7_0" Grid.Row="7" Grid.Column="0" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_1" Grid.Row="7" Grid.Column="1" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_2" Grid.Row="7" Grid.Column="2" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_3" Grid.Row="7" Grid.Column="3" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_4" Grid.Row="7" Grid.Column="4" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_5" Grid.Row="7" Grid.Column="5" Style="{StaticResource DayLabelHeader}" />
+            <Label x:Name="A_7_6" Grid.Row="7" Grid.Column="6" Style="{StaticResource DayLabelHeader}" />
+
+        </Grid>
+        </StackPanel>
+    </Window>

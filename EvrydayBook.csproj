@@ -49,17 +49,34 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.5.1\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.5.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.5.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.5.1\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.5.1\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Additional methods\GenerateConfirmationCode.cs" />
+    <Compile Include="Additional methods\EmailService.cs" />
+    <Compile Include="Auth_Reg.xaml.cs">
+      <DependentUpon>Auth_Reg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Calendar_Window.xaml.cs">
       <DependentUpon>Calendar_Window.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Notifications_Window.xaml.cs">
-      <DependentUpon>Notifications_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings_Window.xaml.cs">
       <DependentUpon>Settings_Window.xaml</DependentUpon>
@@ -67,7 +84,7 @@
     <Compile Include="Task_Window.xaml.cs">
       <DependentUpon>Task_Window.xaml</DependentUpon>
     </Compile>
-    <Page Include="Auth.xaml">
+    <Page Include="Auth_Reg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,17 +100,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Auth.xaml.cs">
-      <DependentUpon>Auth.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Notifications_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Settings_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,13 +131,36 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resourse\Fonts\ofont.ru_Plainot.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\eye1.png" />
+    <Resource Include="Resourse\Pictures\eye2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\Auth_Reg_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\zamok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\Logotip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\Pictures\Calendar_logo.jpg" />
+    <Resource Include="Resourse\Pictures\Profile_logo.jpg" />
+    <Resource Include="Resourse\Pictures\Task_logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
