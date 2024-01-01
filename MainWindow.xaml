@@ -20,8 +20,9 @@
                 <Button Click="ProfileButton_Click">
                     <Image Source="/Resourse/Pictures/Profile_logo.jpg" />
                 </Button>
+            <Button Style="{StaticResource Main_Button}" Margin="450,5,0,0"  Width="100" Content="Назад" Click="Button_Click" />
 
-            </ToolBar>
+        </ToolBar>
             <Grid Margin="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />

@@ -67,6 +67,20 @@ namespace EvrydayBook
             {
                 for (int col = 0; col < 7; col++)
                 {
+                    var dayLabel = (Label)this.FindName($"A_{row}_{col}");
+                    if (dayLabel != null)
+                    {
+                        dayLabel.Content = "";
+                        dayLabel.Background = Brushes.White;
+                        dayLabel.Foreground = Brushes.Black;
+                    }
+                }
+            }
+
+            for (int row = 2; row <= 7; row++)
+            {
+                for (int col = 0; col < 7; col++)
+                {
                     if ((row == 2 && col < dayOfWeek) || day > daysInMonth)
                     {
                         continue;
@@ -77,20 +91,23 @@ namespace EvrydayBook
                     {
                         dayLabel.Content = day.ToString();
 
-                        // Подсветка сегодняшнего дня
                         if (year == DateTime.Today.Year && month == DateTime.Today.Month && day == DateTime.Today.Day)
                         {
                             dayLabel.Background = Brushes.Blue;
+                            dayLabel.Foreground = Brushes.White;
                         }
                         else
                         {
-                            dayLabel.Foreground = Brushes.Black; 
+                            dayLabel.Background = Brushes.White;
+                            dayLabel.Foreground = Brushes.Black;
                         }
                     }
                     day++;
                 }
             }
         }
+
+
 
 
         private void ClearCalendar()
@@ -139,7 +156,11 @@ namespace EvrydayBook
             UpdateCalendar(currentYear, currentMonth);
         }
 
-
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Auth_Reg auth_Reg = new Auth_Reg();
+            auth_Reg.Show();
+            this.Hide();
+        }
     }
 }

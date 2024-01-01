@@ -8,8 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resourse/pictures/calendar_logo.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resourse/pictures/profile_logo.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resourse/pictures/task_logo.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.tt")]
 
 
